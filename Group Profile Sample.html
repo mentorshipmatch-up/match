@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<head>
+	
+	<link rel = "stylesheet" type="text/css" href = "Mentorship Match-Up.css">
+	<title> Starbucks Profile </title>
+
+</head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+<h1>Mentorship Match-Up</h1>
+</div>
+
+<script>
+function goBack() {
+	window.history.back();
+	}
+</script>
+
+<!--Logout Bar-->
+<div id="nav">
+<hr 
+size=1px
+color="black">
+
+<div id="back">
+<a onClick="goBack();"> Back </a>
+</div><!--back-->
+
+<a href="Login Page.html">Log Out</a>
+<hr 
+size=1px
+color="black">
+</div><!--nav-->
+
+
+<!--For picture-->
+<div id="aside">
+<img src="http://cdn.mallmaverick.com/system/stores/store_fronts/000/004/390/original/Starbucks-logo.gif?1384807307g" 
+width=200 px
+height=200px
+border=5px<br>
+Group
+</div><!--aside-->
+
+<!--Location info-->
+<div id="education">
+Location: <br>
+1670 Clavinia Ave, Deerfield IL
+</div><!--education-->
+
+<!-- Middle section (main body) -->
+<div id="section">
+
+<h1>Starbucks</h1>
+<hr>
+
+Suggested Matches: <br><br>
+
+<div id="mentors">
+<div id="underline">Mentors:</div>
+</div>
+<script>
+var mentorList = ["Cecelia Jones ",
+			"Michael Scott ",
+			"Grace Davis ",
+			"Lucas James ",
+			"Elle Woods ",
+			]
+
+for (i=0; i<mentorList.length; i++) {
+	document.getElementById("mentors").innerHTML+=mentorList[i];
+}
+
+</script>
+
+
+<div id="mentees">
+<div id="underline">Mentees:</div>
+</div>
+
+<script>
+var menteeList = ["Jimmy Johnson ",
+				  "Dwight Schrute ",
+			 	  "Jim Jimmers ",
+			  	  "James Lucas ",
+				  "Warner III",
+				 ]
+
+//displays each element in a list on a different line
+for (i=0; i<mentorList.length; i++) {
+	document.getElementById("mentees").innerHTML+=menteeList[i];
+}
+
+//function to shuffle a list by changing the indeces
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex ;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+
+//shuffles the list of mentees and displays the revised list
+function newMentees() {
+	shuffle(menteeList);
+	document.getElementById("mentees");
+	mentees.innerText = mentees.innerText.replace(menteeList);
+		
+	
+	console.log(menteeList);
+}
+
+
+</script>
+
+</div><!--section-->
+
+
+<!--About the Company-->
+<div id="friends">
+<h2>About the Company:</h2>
+Starbucks has been serving coffee for many years now. Also associated with being as cool as the frozen tundra.
+</div><!--friends-->
+
+
+
+
+<div id="groupaccept">
+<a href="#"  class="myButton" onClick="alert ('Successfully Saved')">Accept?</a>
+<a href="#"  class="myButton" onClick="newMentees() +alert('Now shuffling mentees')">Decline</a>
+</div><!--groupaccept-->
+
+<script>console.log(menteeList);</script>
+
+
+<!--Footer-->
+<div id="footer">
+2015 @ Mentorship Match-Up <br>
+Chicago, IL
+</div>
+
+</div><!--wrapper-->
+
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
