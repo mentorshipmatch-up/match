@@ -9,8 +9,9 @@ body {
 	
 	}
 	
-	#wrapper {
-	height: auto;
+#wrapper {
+	height: auto !important;
+	height: 100%;
 	width: 100%;
 	min-height:100%;
 	position:absolute;
@@ -85,9 +86,9 @@ float: left
     clear:both;
     text-align:center;
     padding:5px; 
-    font-size: 15px;  
-    bottom: 0;
     position: absolute;
+    font-size: 15px;  
+    bottom: -30px;
     display: inline-block;
     width: 100%;
     right: 17px;
